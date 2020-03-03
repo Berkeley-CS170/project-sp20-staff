@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-zip -r autograder.zip deploy_key setup.sh
+zip -r autograder.zip deploy_key setup.sh ssh_config run_autograder

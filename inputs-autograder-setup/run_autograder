@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+# Update autograder files
+cp /autograder/submission/graph.in /autograder/code/inputs/graph.in
+
+cd /autograder/code
+git pull
+
+python3.6 run_tests.py > /autograder/code/results.json
