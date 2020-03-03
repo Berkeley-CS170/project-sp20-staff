@@ -12,6 +12,6 @@ cp deploy_key /root/.ssh/deploy_key
 ssh-keyscan -t rsa github.com >> ~/.ssh/known_hosts
 
 # Clone autograder files
-git clone git@github.com:Berkeley-CS170/proj-sp20-input-autograder.git /autograder/source
+git clone git@github.com:Berkeley-CS170/proj-sp20-input-autograder.git /autograder/code
 # Install python dependencies
-pip3 install -r /autograder/source/requirements.txt
+pip3 install -r /autograder/code/requirements.txt
