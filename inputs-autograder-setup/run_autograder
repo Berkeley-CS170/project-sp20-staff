@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Update autograder files
-cp /autograder/submission/graph.in /autograder/code/inputs/graph.in
+cp /autograder/submission/*.in /autograder/code/inputs/
 
 cd /autograder/code
 git pull
