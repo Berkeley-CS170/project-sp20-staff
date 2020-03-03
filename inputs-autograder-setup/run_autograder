@@ -1,9 +1,11 @@
 #!/usr/bin/env bash
 
 # Update autograder files
-cp /autograder/submission/*.in /autograder/code/inputs/
+mkdir -p /autograder/code/submission/
+
+cp -r /autograder/submission/* /autograder/code/submission/
 
 cd /autograder/code
 git pull
 
-python3.6 run_tests.py > /autograder/code/results.json
+python3.6 run_tests.py > /autograder/source/results.json
