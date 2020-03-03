@@ -1,2 +1,8 @@
 */deploy_key
 */autograder.zip
+
+*.in
+*.out
+*.swp
+.DS_Store
+
