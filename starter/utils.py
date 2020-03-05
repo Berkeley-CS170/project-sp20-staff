@@ -1,4 +1,3 @@
-import scipy as sp
 import networkx as nx
 
 def is_valid_network(G, T):
@@ -28,4 +27,4 @@ def average_pairwise_distance(T):
     """
     path_lengths = nx.all_pairs_dijkstra_path_length(T)
     total_pairwise_distance = sum([sum(length[1].values()) for length in path_lengths]) / 2
-    return total_pairwise_distance / sp.special.comb(len(T), 2)
+    return total_pairwise_distance / (len(T) * (len(T) - 1))
