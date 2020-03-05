@@ -1,5 +1,6 @@
 import networkx as nx
-from parse import read_input_file, write_output_file 
+from parse import read_input_file, write_output_file
+from utils import is_valid_network, average_pairwise_distance
 import sys
 
 def solve(G):
@@ -12,7 +13,7 @@ def solve(G):
     """
 
     T =  # TODO: your code here!
-    return nx.minimum_spanning_tree(G)
+    return T
 
 
 
@@ -21,4 +22,6 @@ if __name__ == '__main__':
     path = sys.argv[1]
     G = read_input_file(path)
     T = solve(G)
+    assert is_valid_network(G, T)
+    print("Average  pairwise distance: {}".format(average_pairwise_distance(T)))
     write_output_file(T, 'out/test.out')
